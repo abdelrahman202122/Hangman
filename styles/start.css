@@ -1,0 +1,42 @@
+.start-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+}
+
+#logo {
+  height: 50%;
+  width: auto;
+}
+
+#play-btn {
+  height: 40%;
+  width: auto;
+}
+
+.high-score {
+  display: flex;
+  align-items: center;
+  height: 18%;
+}
+
+.high-score img {
+  height: 100%;
+  width: auto;
+}
+
+.high-score__number {
+  height: fit-content;
+
+  color: var(--blue-5);
+  font-size: 6em;
+}

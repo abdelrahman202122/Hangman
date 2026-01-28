@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play</title>
+    <link rel="stylesheet" href="../styles/general.css" />
+    <link rel="stylesheet" href="../styles/play.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <main>
+        <div class="play-page">
+          <div class="play-page__header">
+            <div class="gameplay-field">
+              <img
+                src=".././assets/gameplay_diamond.png"
+                alt="gameplay diamonds"
+              />
+              <p class="diamonds-num">0</p>
+            </div>
+            <div class="gameplay-field">
+              <img
+                src=".././assets/gameplay_check.png"
+                alt="gameplay check cup"
+              />
+              <p class="current-score">0</p>
+            </div>
+            <img
+              src=".././assets/gameplay_pause.png"
+              alt="gameplay pause"
+              class="pause-btn"
+            />
+          </div>
+
+          <div class="play-page__main">
+            <div class="guess-area">
+              <div class="category">
+                <img
+                  src="../assets/gameplay_clueframe.png"
+                  alt="gameplay clue frame"
+                />
+                <p class="category-name"></p>
+              </div>
+
+              <div class="answer-area"></div>
+
+              <div class="letters-container hide"></div>
+
+              <div class="game-over__sheet">
+                <img
+                  src="../assets/gameover_background.png"
+                  alt="game over background"
+                  class="game-over_background"
+                />
+
+                <div class="sheet__header">
+                  <div>
+                    <img
+                      src=".././assets/gameplay_check.png"
+                      alt="gameplay check cup"
+                    />
+                    <div class="current-score">0</div>
+                  </div>
+                  <div>
+                    <img
+                      src=".././assets/gameplay_diamond.png"
+                      alt="gameplay diamonds"
+                    />
+                    <div class="diamonds-num">0</div>
+                  </div>
+                </div>
+
+                <div class="game-over__buttons">
+                  <img
+                    src="../assets/general_home.png"
+                    alt="home"
+                    class="go-home"
+                  />
+                  <img
+                    src="../assets/general_restart.png"
+                    alt="restart"
+                    class="restart-game"
+                  />
+                </div>
+              </div>
+
+              <div class="well-done__sheet">
+                <img
+                  src="../assets/welldone_background.png"
+                  alt="well done background"
+                  class="well-done_background"
+                />
+
+                <div class="sheet__header">
+                  <div>
+                    <img
+                      src=".././assets/gameplay_check.png"
+                      alt="gameplay check cup"
+                    />
+                    <div class="current-score">0</div>
+                  </div>
+                  <div>
+                    <img
+                      src=".././assets/gameplay_diamond.png"
+                      alt="gameplay diamonds"
+                    />
+                    <div class="diamonds-num">0</div>
+                  </div>
+                </div>
+
+                <img
+                  src="../assets/welldone_next.png"
+                  alt="next level"
+                  class="next-level__btn"
+                />
+              </div>
+            </div>
+
+            <div class="gallow-area">
+              <p>Level <span class="level"></span></p>
+              <div class="draw">
+                <img
+                  src="../assets/animation_gallow.png"
+                  alt="gallow"
+                  class="gallow"
+                />
+                <div class="body-parts"></div>
+                <span class="lose-animation hide"></span>
+                <span class="win-animation hide"></span>
+              </div>
+            </div>
+
+            <div class="hint-area">
+              <p class="not-enough hide">Not enough diamonds.</p>
+              <div class="confirm-hint hide">
+                <p>Are you sure?</p>
+                <p>(tab again)</p>
+              </div>
+              <div class="hint-cost">
+                <img src="../assets/gameplay_diamond.png" alt="diamond" />
+                <span>10</span>
+              </div>
+              <img src="../assets/hint.png" alt="hint" class="hint-btn" />
+            </div>
+          </div>
+        </div>
+
+        <div id="modal" class="hide">
+          <div class="pause-modal">
+            <button class="close-modal"></button>
+            <p>Paused</p>
+            <div>
+              <img
+                src="../assets/general_home.png"
+                alt="home"
+                class="go-home"
+              />
+              <img
+                src="../assets/general_restart.png"
+                alt="restart"
+                class="restart-game"
+              />
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="copyrights">
+          <img src=".././assets/hangman.avif" alt="hangman logo" />
+          <div>
+            <h3>Hangman</h3>
+            <p>by MarketJs</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../js/play.js"></script>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+@import url('https://fonts.cdnfonts.com/css/naomi');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Proxima Nova;
+  font-weight: 400;
+  src:
+    url(https://a.poki-cdn.com/fonts/proxima-nova-regular-cyrillic.woff2)
+      format('woff2'),
+    url(https://a.poki-cdn.com/fonts/proxima-nova-regular-cyrillic.woff)
+      format('woff');
+  unicode-range: u + 04;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Torus;
+  font-weight: 700;
+  src:
+    url(https://a.poki-cdn.com/fonts/torus-bold-latin.woff2) format('woff2'),
+    url(https://a.poki-cdn.com/fonts/torus-bold-latin.woff) format('woff');
+  unicode-range:
+    u + 0020 -007f,
+    u + 00a0 -00ff;
+}
+
+:root {
+  --fontBody:
+    'Proxima Nova', 'Open Sans', 'Gill Sans MT', 'Gill Sans',
+    'Noto Sans Arabic', Arial, sans-serif;
+  --fontTorus: 'Torus', 'Noto Sans Arabic', sans-serif;
+  --fontNaomi: 'Naomi', sans-serif;
+  --blue: #002b50;
+  --blue-2: #0074e0;
+  --green: #83ffe7;
+  --grey: #5d6b84;
+  --white: #fff;
+  --sm: 540px;
+  --md: 720px;
+  --lg: 960px;
+  --xl: 1140px;
+  --xxl: 1250px;
+
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--green);
+  background-image: url('../assets/bg-diamante.svg');
+  background-size: cover;
+  font-family: var(--fontNaomi);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--blue-2);
+}
+
+.game-container {
+  background-color: var(--white);
+  width: var(--xl);
+  height: calc(var(--xl) / 1.6);
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  background-image: url('.././assets/general_background_horizontal.png');
+  height: 85%;
+  position: relative;
+  background-size: cover;
+  padding: 40px 10px 10px;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+
+footer {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.copyrights {
+  display: flex;
+  gap: 1%;
+  height: 100%;
+  width: 100%;
+  padding: 2%;
+}
+
+.copyrights img {
+  height: 100%;
+  width: auto;
+  border-radius: 8px;
+}
+
+.copyrights div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.copyrights div h3 {
+  font-family: var(--fontTorus);
+  font-size: 2em;
+  color: var(--blue);
+}
+
+.copyrights div p {
+  color: var(--grey);
+  display: block;
+  font: 1.2em var(--fontBody);
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 1200px) {
+  .game-container {
+    width: var(--lg);
+    height: calc(var(--lg) / 1.6);
+  }
+  footer {
+    font-size: 1.1vw;
+  }
+  main {
+    font-size: 1vw;
+    padding: 30px 15px 15px;
+  }
+}
+
+@media (max-width: 991px) {
+  .game-container {
+    width: var(--md);
+    height: calc(var(--md) / 1.6);
+  }
+  main {
+    padding: 20px 10px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .game-container {
+    width: var(--sm);
+    height: calc(var(--sm) / 1.6);
+  }
+  main {
+    padding: 10px 5px 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .game-container {
+    width: 90vw;
+    height: 56vw;
+  }
+  main {
+    padding: 2px;
+  }
+}
